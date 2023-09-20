@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -oc "$CFILE.c" "$CFILE.o"
+gcc -oc "$CFILE" "$CFILE.o"; truncate -s -3 "$CFILE.o"; $CFILE="$CFILE.o"
