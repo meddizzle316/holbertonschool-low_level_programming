@@ -14,15 +14,15 @@ int main(void)
 	n = rand() - RAND_MAX / 2;
 	if (n > 0)
 	{
-		puts("is positive");
+		puts("%lu is positive", n);
 	}
 	else if (n == 0)
 	{
-		puts("is zero");
+		puts("%lu is zero", n);
 	}
 	else if (n < 0)
 	{
-		puts("is negative");
+		puts("%lu is negative", n);
 	}
 	return (0);
 }
