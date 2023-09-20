@@ -10,12 +10,11 @@ int main(void)
 {
 	int n;
 
-	float last_d = n % 10;
+	int last_d;
 
+	last_d = n % 10;
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	float last_d = n % 10;
-
 	if (last_d > 5)
 	{
 		printf("Last digit of %d is %f and is greater than 4\n", n, last_d);
