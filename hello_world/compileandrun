@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+gcc -o -Wall -Werror -Wextra -pedantic -std=gnu89 "$1" "$1.c"  
