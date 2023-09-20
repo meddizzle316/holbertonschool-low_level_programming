@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -oc "$CFILE" "$OFILE"; OFILE=(truncate -s -1 $OFILE); OFILE="$OFILE.c" 
+gcc -oc "$CFILE" "$OFILE"; OFILE=$(truncate -s -1 "$OFILE"); OFILE="$OFILE.c" 
