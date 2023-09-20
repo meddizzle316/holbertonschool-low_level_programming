@@ -14,15 +14,15 @@ int main(void)
 	n = rand() - RAND_MAX / 2;
 	if (n > 0)
 	{
-		printf("%lu is positive", n);
+		printf("%u is positive", n);
 	}
 	else if (n == 0)
 	{
-		printf("%lu is zero", n);
+		printf("%u is zero", n);
 	}
 	else if (n < 0)
 	{
-		printf("%lu is negative", n);
+		printf("%u is negative", n);
 	}
 	return (0);
 }
