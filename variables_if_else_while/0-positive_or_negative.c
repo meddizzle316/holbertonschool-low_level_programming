@@ -18,7 +18,7 @@ int main(void)
 	}
 	else if (n == 0)
 	{
-		printf("%u is zero\n", n);
+		printf("%lu is zero\n", n);
 	}
 	else if (n < 0)
 	{
