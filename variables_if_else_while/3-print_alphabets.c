@@ -1,8 +1,8 @@
 #include <stdio.h>
 /**
- * main -- prints the alphabet in lower casethen upper case with a new line
+ * main - prints the alphabet in lower casethen upper case with a new line
  *
- * return -- the whole alphabet twice
+ * Return: the whole alphabet twice
  */
 int main(void)
 {
@@ -10,11 +10,11 @@ int main(void)
 
 	char upper;
 
-	for (lower = 'a'; lower < 'z'; lower++)
+	for (lower = 'a'; lower == 'z'; lower++)
 	{
 		putchar(lower);
 	}
-	for (upper = 'A'; upper < 'Z'; upper++)
+	for (upper = 'A'; upper == 'Z'; upper++)
 	{
 		putchar(upper);
 	}
