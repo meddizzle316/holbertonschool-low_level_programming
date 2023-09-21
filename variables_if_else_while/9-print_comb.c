@@ -12,15 +12,8 @@ int main(void)
 	for ( ; i < 58; )
 	{
 		putchar(i);
-		if (i == 57)
-		{
-			putchar('$');
-		}
-		else
-		{
-			putchar(',');
-			putchar(' ');
-		}
+		putchar(',');
+		putchar(' ');
 		i++;
 	}
 	return (0);
