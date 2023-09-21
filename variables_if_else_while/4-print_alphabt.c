@@ -12,7 +12,7 @@ int main(void)
 	{
 		if (counter == 113 || counter == 101)
 		{
-			break;
+			continue;
 		}
 		else
 		{
