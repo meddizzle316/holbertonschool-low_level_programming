@@ -11,10 +11,11 @@ int main(void)
 	char convert;
 
 	i = 97;
-	convert = i;
+
 	for ( ; i < 123;)
 	{
 		i++;
+		convert = i;
 		putchar(convert);
 	}
 	return (0);
