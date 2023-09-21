@@ -7,5 +7,5 @@
  */
 void _putchar(char n[])
 {
-	printf("_putchar\n");
+	printf("%s\n", n);
 }
