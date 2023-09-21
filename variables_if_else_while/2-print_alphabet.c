@@ -14,9 +14,9 @@ int main(void)
 
 	for ( ; i < 123;)
 	{
-		i++;
 		convert = i;
 		putchar(convert);
+		i++;
 	}
 	return (0);
 }
