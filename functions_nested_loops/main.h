@@ -3,5 +3,4 @@
 
 /* Function prototype - will print '_putchar' */
 void _putchar(void);
-
 #endif
