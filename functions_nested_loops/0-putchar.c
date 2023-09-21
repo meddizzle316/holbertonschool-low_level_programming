@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * putchar - prints _putchar with a new line
+ * putchar - prints with a new line
  *
  * Return: ditto
  */
