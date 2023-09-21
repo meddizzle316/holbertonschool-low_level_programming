@@ -5,7 +5,7 @@
  *
  * Return: ditto
  */
-void _putchar(char[], n)
+void _putchar(char[])
 {
 	printf("_putchar\n");
 }

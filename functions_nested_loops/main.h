@@ -2,5 +2,5 @@
 #define MAIN_H
 
 /* Function prototype - will print  */
-void _putchar(char[], n);
+void _putchar(char[]);
 #endif
