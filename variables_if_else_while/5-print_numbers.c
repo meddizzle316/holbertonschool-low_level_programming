@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * main - printing all single digit numbers 
+ * main - printing all single digit numbers
  *
  * Return: all the single ladies
  */
