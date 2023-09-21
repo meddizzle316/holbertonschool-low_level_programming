@@ -2,6 +2,6 @@
 #define MAIN_H
 
 /* Function prototype - will print '_putchar' */
-void _putchar(void);
+void putchar(void);
 
 #endif
