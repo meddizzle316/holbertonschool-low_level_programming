@@ -1,10 +1,10 @@
 #include "main.h"
 /**
- * _putchar - prints _putchar with a new line
+ * putchar - prints _putchar with a new line
  *
  * Return: ditto
  */
-void _putchar(void)
+void putchar(void)
 {
 	printf("_putchar\n");
 }
