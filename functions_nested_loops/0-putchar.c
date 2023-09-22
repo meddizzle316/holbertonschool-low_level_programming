@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * putchar - prints with a new line
+ * main - prints with a new line
  *
  * Return: ditto
  */
@@ -17,4 +17,3 @@ int main(void)
 	_putchar('r');
 	_putchar('\n');
 	return (0);
-}
