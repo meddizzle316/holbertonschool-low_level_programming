@@ -2,7 +2,8 @@
 #define MAIN_H
 #include <stdio.h>
 
-/* Function prototype - will print  */
-int _putchar(char n[]);
-#endif
 
+int _putchar(char n[]);
+/* function prototype - it prints stuff */
+
+#endif
