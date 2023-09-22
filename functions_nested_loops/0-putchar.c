@@ -5,7 +5,7 @@
  *
  * Return: ditto
  */
-int _putchar()
+int _putchar(char x)
 {
 	printf("_putchar");
 	return (0);
