@@ -7,6 +7,6 @@
  * Desc: Header file
  */
 
-int _putchar(char c);
+int main(char c);
 
 #endif
