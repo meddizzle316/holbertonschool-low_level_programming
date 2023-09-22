@@ -9,6 +9,9 @@ int print_last_digit(int n)
 	int last_d;
 
 	last_d = n % 10;
-	_putchar('0' + last_d);
-	return (last_d);
+	if (last_d > 47 && last_d < 58)
+	{
+		_putchar('0' + last_d);
+		return (last_d);
+	}
 }
