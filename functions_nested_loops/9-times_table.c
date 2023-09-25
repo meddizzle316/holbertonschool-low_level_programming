@@ -19,33 +19,25 @@ void times_table(void)
 			{
 				_putchar('0' + sum);
 			}
-			else if (sum < 10 && y != 9)
+			if (y > 0)
 			{
 				_putchar(',');
 				_putchar(' ');
-				_putchar(' ');
-				_putchar('0' + sum);
 			}
-			else if (sum > 9 && y != 9)
+			if (sum < 10 && y != 9 && y != 0)
 			{
-				_putchar(',');
-				_putchar(' ');
-				_putchar((sum / 10) + '0');
-				_putchar((sum % 10) + '0');
-			}
-			else if (sum < 10)
-			{
-				_putchar(',');
-				_putchar(' ');
 				_putchar(' ');
 				_putchar('0' + sum);
 			}
 			else if (sum > 9)
 			{
-				_putchar(','); 
-				_putchar(' '); 
-				_putchar((sum / 10) + '0'); 
+				_putchar((sum / 10) + '0');
 				_putchar((sum % 10) + '0');
+			}
+			else if (sum < 10)
+			{
+				_putchar(' ');
+				_putchar('0' + sum);
 			}
 		}
 		_putchar('\n');
