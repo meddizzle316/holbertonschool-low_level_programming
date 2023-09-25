@@ -6,42 +6,48 @@
  */
 void times_table(void)
 {
-        int x;
-        int y;
-        int sum;
+	int x;
+	int y;
+	int sum;
 
-        for (x = 0; x < 10; x++)
-        {
-                for (y = 0; y < 10; y++)
-                {
-                        sum = x * y;
-                        if (sum < 10 && y != 9)
-                        {
-                                putchar('0' + sum);
-                                putchar (',');
-                                putchar (' ');
-                                putchar (' ');
-
-                        }
-                        else if (sum > 9 && y != 9)
-                        {
-                                putchar((sum/10) + '0');
-                                putchar((sum%10) + '0');
-                                putchar(',');
-                                putchar(' ');
-                        }
-                        else if (sum < 10)
-                        {
-                                putchar(' ');
-                                putchar('0' + sum);
-                        }
-                        else if (sum > 9)
-                        {
-                                putchar((sum/10) + '0');
-                                putchar((sum%10) + '0');
-                        }
-
-                }
-                putchar('\n');
-        }
+	for (x = 0; x < 10; x++)
+	{
+		for (y = 0; y < 10; y++)
+		{
+			sum = x * y;
+			if (y == 0)
+			{
+				_putchar('0' + sum);
+			}
+			if (sum < 10 && y != 9)
+			{
+				_putchar(',');
+				_putchar(' ');
+				_putchar(' ');
+				_putchar('0' + sum);
+			}
+			else if (sum > 9 && y != 9)
+			{
+				_putchar(',');
+				_putchar(' ');
+				_putchar((sum / 10) + '0');
+				_putchar((sum % 10) + '0');
+			}
+			else if (sum < 10)
+			{
+				_putchar(',');
+				_putchar(' ');
+				_putchar(' ');
+				_putchar('0' + sum);
+			}
+			else if (sum > 9)
+			{
+				_putchar(',');
+				_putchar(' ');
+				_putchar((sum / 10) + '0');
+				_putchar((sum % 10) + '0');
+			}
+		}
+		_putchar('\n');
+	}
 }
