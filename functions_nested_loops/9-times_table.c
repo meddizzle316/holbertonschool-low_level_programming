@@ -19,7 +19,7 @@ void times_table(void)
 			{
 				_putchar('0' + sum);
 			}
-			if (sum < 10 && y != 9)
+			else if (sum < 10 && y != 9)
 			{
 				_putchar(',');
 				_putchar(' ');
@@ -42,9 +42,9 @@ void times_table(void)
 			}
 			else if (sum > 9)
 			{
-				_putchar(',');
-				_putchar(' ');
-				_putchar((sum / 10) + '0');
+				_putchar(','); 
+				_putchar(' '); 
+				_putchar((sum / 10) + '0'); 
 				_putchar((sum % 10) + '0');
 			}
 		}
