@@ -36,6 +36,6 @@ void print_to_98(int n)
 	}
 	else if (i == 98)
 	{
-		print("%d\n", i);
+		printf("%d\n", i);
 	}
 }
