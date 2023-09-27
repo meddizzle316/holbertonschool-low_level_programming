@@ -9,7 +9,6 @@ void print_triangle(int size)
 	if (size > 0)
 	{
 		int height;
-		int width;
 		int row;
 		int spaces;
 		int hashtags;
