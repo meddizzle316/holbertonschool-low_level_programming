@@ -11,8 +11,10 @@ int mul(int a, int b)
 
 	if (a > 47 && a < 58 && b > 47 && b < 58)
 	{
-		sum = a * b;
-		_putchar(sum);
+		return (a * b);
 	}
-	return (0);
+	else 
+	{
+		return (0);
+	}
 }
