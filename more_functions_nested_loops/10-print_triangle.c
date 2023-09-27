@@ -10,31 +10,27 @@ void print_triangle(int size)
 	{
 		int height;
 		int width;
+		int row;
 		int spaces;
 
-		if (size > 0)
+		row = 1;
+		for (height = size; height > 0; height--)
 		{
-			for (height = 0; height < size; height++)
+			spaces = size - row;
+			hashtags = row;
+			for ( ; spaces > 0; spaces++)
 			{
-				for (width = 0; width < size; width++)
-				{
-					for (spaces = size; spaces > 0; spaces--)
-					{
-						if (width <= spaces)
-						{
-							_putchar(35);
-						}
-						else 
-						{
-							_putchar(' ');
-						}
-					}
-				}
-				_putchar('\n');
+				_putchar(' ');
 			}
+			for ( ; hashtags > 0; hashtags--)
+			{
+				putchar(35);
+			}
+			row++;
+			_putchar('\n');
 		}
 	}
-	else 
+	else
 	{
 		_putchar('\n');
 	}
