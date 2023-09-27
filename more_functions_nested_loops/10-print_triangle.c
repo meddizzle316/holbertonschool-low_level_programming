@@ -18,7 +18,7 @@ void print_triangle(int size)
 		{
 			spaces = size - row;
 			hashtags = row;
-			for ( ; spaces > 0; spaces++)
+			for ( ; spaces > 0; spaces--)
 			{
 				_putchar(' ');
 			}
