@@ -12,6 +12,7 @@ void print_triangle(int size)
 		int width;
 		int row;
 		int spaces;
+		int hashtags;
 
 		row = 1;
 		for (height = size; height > 0; height--)
@@ -24,7 +25,7 @@ void print_triangle(int size)
 			}
 			for ( ; hashtags > 0; hashtags--)
 			{
-				putchar(35);
+				_putchar(35);
 			}
 			row++;
 			_putchar('\n');
