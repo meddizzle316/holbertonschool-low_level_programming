@@ -11,7 +11,7 @@ int mul(int a, int b)
 
 	if (a > 47 && a < 58 && b > 47 && b < 58)
 	{
-		sum = a * b; 
+		a * b; 
 	}
-	return (sum);
+	return (0);
 }
