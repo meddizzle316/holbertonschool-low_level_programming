@@ -10,9 +10,6 @@ void swap_int(int *a, int *b)
 	int *ptra; 
 	int *ptrb;
 
-	ptra = &a;
-	ptrb = &b;
-
-	*ptra = &b;
-	*ptrb = &a;
+	*ptra = *a;
+	*ptrb = *b;
 }
