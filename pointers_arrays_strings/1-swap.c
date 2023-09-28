@@ -7,9 +7,8 @@
  */
 void swap_int(int *a, int *b)
 {
-	int *ptra; 
-	int *ptrb;
-
-	*ptra = *a;
-	*ptrb = *b;
+	int t;
+	t = *a;
+	*a = *b;
+	*b = t;
 }
