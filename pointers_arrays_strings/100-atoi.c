@@ -15,7 +15,7 @@ int _atoi(char *s)
 	{
 		if (s[i] >= 48 && s[i] <= 57)
 		{
-		      res = res*10 + s[i] - '0';
+		      res = res*10 + (s[i] - '0');
 		      hasNumber = 1;
 		}
 		if (s[i] == '-' && isNegative == 1)
