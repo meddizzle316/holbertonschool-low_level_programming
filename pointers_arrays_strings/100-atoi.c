@@ -10,7 +10,7 @@ int _atoi(char *s)
 	int i, isNegative, hasNumber;
 
 	hasNumber = 0; 
-	isNegative = 0;
+	isNegative = 1;
 	for (i = 0; s[i] != '\0'; ++i)
 	{
 		if (s[i] >= 48 && s[i] <= 57)
@@ -18,25 +18,18 @@ int _atoi(char *s)
 		      res = res*10 + s[i] - '0';
 		      hasNumber = 1;
 		}
-		if (s[i] == '-' && isNegative == 0)
+		if (s[i] == '-' && isNegative == 1)
 		{
-			isNegative = 1;
+			isNegative = -1;
 		}
-		else if (s[i] == '-' && isNegative == 1)
+		else if (s[i] == '-' && isNegative == -1)
 		{
-			isNegative = 0; 
+			isNegative = 1; 
 		}
 		else if (s[i] == ' ' && hasNumber == 1)
 		{
 			break;
 		}
 	}  
-	if (isNegative == 1)
-	{
-		return (-res);
-	}
-	else 
-	{
-		return (res);
-	}
+	return (isNegative * res);
 }
