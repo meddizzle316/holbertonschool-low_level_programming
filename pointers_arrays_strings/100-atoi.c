@@ -21,7 +21,7 @@ int _atoi(char *s)
 		{
 			isNegative = 1;
 		}
-		else if (s[i] == '-' && isNegative == 0)
+		else if (s[i] == '-' && isNegative == 1)
 		{
 			isNegative = 0; 
 		}
