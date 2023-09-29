@@ -5,12 +5,12 @@
  * @a: array of int
  * @n: starting point
  * Return: no return
- */ 
+ */
 void print_array(int *a, int n)
 {
 	int i;
 
-	for (i = 0; i < n; i ++)
+	for (i = 0; i < n; i++)
 	{
 		if (i < n - 1)
 		{
@@ -21,5 +21,5 @@ void print_array(int *a, int n)
 			printf("%d", a[i]);
 		}
 	}
-printf("\n");	
+printf("\n");
 }
