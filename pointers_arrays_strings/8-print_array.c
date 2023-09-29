@@ -3,9 +3,9 @@
 /**
  * print_array - prints n elements of an array of int with newline
  * @a: array of int
- * @n: starting point 
- * Return: nothing
- */
+ * @n: starting point
+ * Return: no return
+ */ 
 void print_array(int *a, int n)
 {
 	int i;
@@ -19,7 +19,7 @@ void print_array(int *a, int n)
 		else
 		{
 			printf("%d", a[i]);
-		{
+		}
 	}
 	_putchar('\n');	
 }
