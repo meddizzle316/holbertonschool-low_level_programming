@@ -19,7 +19,7 @@ int _atoi(char *s)
 		      res = res*10 + (s[i] - '0');
 		      hasNumber = 1;
 		}
-		else if (s[i] >= 48 && s[i] <= 57 && isNegative == -1 && res < -21474836)
+		else if (s[i] >= 48 && s[i] <= 57 && isNegative == -1)
 		{
 			res =  (res*10 - '0') + s[i];
 			isBig = 1;
@@ -43,6 +43,6 @@ int _atoi(char *s)
 	}
 	else 
 	{
-		return ((isNegative * res)-1);
+		return (isNegative * res);
 	}
 }
