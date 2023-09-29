@@ -13,10 +13,14 @@ int _atoi(char *s)
 	isNegative = 1;
 	for (i = 0; s[i] != '\0'; ++i)
 	{
-		if (s[i] >= 48 && s[i] <= 57)
+		if (s[i] >= 48 && s[i] <= 57 && isNegative == 1)
 		{
 		      res = res*10 + (s[i] - '0');
 		      hasNumber = 1;
+		}
+		else if (s[i] >= 48 && s[i] <= 57 && isNegative == -1)
+		{
+			res = (res*10 - '0') + s[i];
 		}
 		if (s[i] == '-' && isNegative == 1)
 		{
