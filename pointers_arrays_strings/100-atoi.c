@@ -22,7 +22,7 @@ int _atoi(char *s)
 		else if (s[i] >= 48 && s[i] <= 57 && res > 214748362 && isNegative == -1)
 			{
 			res =  -48 + (res * 10);
-			lastAdd = s[i - 1];
+			lastAdd = s[i] - 1;
 			isMin = 1;
 			}
 		else if (s[i] >= 48 && s[i] <= 57 && res > 214748362)
@@ -45,7 +45,7 @@ int _atoi(char *s)
 	}
 	if (isMin == 1)
 	{
-		return ((isNegative * (res + lastAdd)) - 4);
+		return ((isNegative * (res + lastAdd)) - 1);
 	}
 	else
 	{
