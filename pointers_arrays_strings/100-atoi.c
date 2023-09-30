@@ -40,7 +40,7 @@ int _atoi(char *s)
 	}
 	if (isBig == 1)
 	{
-		return ((isNegative * (res + lastAdd)) - 1);
+		return ((isNegative * (res + lastAdd)) - 4);
 	}
 	else
 	{
