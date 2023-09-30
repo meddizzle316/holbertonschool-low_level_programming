@@ -38,7 +38,7 @@ int _atoi(char *s)
 			break;
 			}
 	}
-	if (isBig == 0)
+	if (isBig == 1)
 	{
 		return ((isNegative * res) + lastAdd);
 	}
