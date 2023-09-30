@@ -7,22 +7,21 @@
 int _atoi(char *s)
 {
 	int res = 0;
-	int i, isNegative, hasNumber, isBig, lastAdd;
-	
+	int i, isNegative, hasNumber, isBig;
+
 	isBig = 0;
 	hasNumber = 0;
 	isNegative = 1;
 	for (i = 0; s[i] != '\0'; ++i)
 	{
-		if (s[i] >= 48 && s[i] <= 57 && res > 214748362)
+		if (s[i] >= 48 && s[i] <= 57 && isNegative == 1)
 		{
 			res = res * 10 + (s[i] - '0');
 			hasNumber = 1;
 			}
-		else if (s[i] >= 48 && s[i] <= 57 && res < 214748362)
+		else if (s[i] >= 48 && s[i] <= 57 && isNegative == -1)
 			{
-			res =  -48 + (res * 10);
-			lastAdd = s[i];
+			res =  (res * 10 - '0') + s[i];
 			isBig = 1;
 			}
 		if (s[i] == '-' && isNegative == 1)
@@ -40,7 +39,7 @@ int _atoi(char *s)
 	}
 	if (isBig == 0)
 	{
-		return ((isNegative * res) + lastAdd);
+		return (isNegative * res);
 	}
 	else
 	{
