@@ -5,9 +5,19 @@
  * @n: given size of array
  * Return: return value
  */
-#include "main.h"
-/**
- * function name - function description
- * @parameters: description
- * Return: return value
- */
+void reverse_array(int *a, int n)
+{
+	int i;
+	int temp;
+	int j;
+	
+	j = n - 1;
+       	temp = 0;	
+	for (i = 0; i < n / 2; i++)
+	{
+		temp = a[i];
+		a[i] = a[j];
+		a[j] = temp; 
+		j--;
+	}	
+}
