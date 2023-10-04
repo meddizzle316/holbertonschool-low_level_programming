@@ -12,8 +12,8 @@ char *string_toupper(char *src)
 	{
 		if (src[i] >= 97 && src[i] <= 122)
 		{
-			src[i] -= 32;  
+			src[i] -= 32;
 		}
 	}
-	return (src);	
+	return (src);
 }
