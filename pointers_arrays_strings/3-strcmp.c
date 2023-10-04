@@ -11,7 +11,7 @@ int _strcmp(char *s1, char *s2)
 	int output;
 	int isEqual;
 
-	i = 0; 
+	i = 0;
 	while (s1[i] != '\0' && s2[i] != '\0')
 	{
 		if (s1[i] == s2[i])
@@ -19,12 +19,12 @@ int _strcmp(char *s1, char *s2)
 			isEqual = 0;
 
 		}
-		else 
-		{	
+		else
+		{
 			output = s1[i] - s2[i];
 			isEqual = -1;
 			break;
-		}		
+		}
 	i++;
 	}
 	if (isEqual == 0)
