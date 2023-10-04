@@ -13,7 +13,7 @@ char *cap_string(char *src)
 	isNewWord = 0;
 	for (i = 0; src[i]; i++)
 	{
-		if (src[i - 1] <= 47)
+		if (src[i - 1] <= 47 && src[i - 1] != 45)
 		{
 			isNewWord = 1;
 		}
