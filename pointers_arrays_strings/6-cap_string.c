@@ -7,17 +7,32 @@
 char *cap_string(char *src)
 {
 	int i;
+	int isNewWord;
 
-	for (i = 0; src[i]; )
+	src[-1] = 0;
+	isNewWord = 0;
+	for (i = 0; src[i]; i++)
 	{
-		if (src[i] >= 97 && src[i] <= 122)
+		if (src[i - 1] <= 64)
+		{
+			isNewWord = 1;
+		}
+		else if (src[i - 1] >= 91 && src[i - 1] <= 96)
+		{
+			isNewWord = 1;
+		}
+		else if (src[i - 1] >= 123)
+		{
+			isNewWord = 1;
+		}
+		if (src[i] >= 97 && src[i] <= 122 && isNewWord == 1)
 		{
 			src[i] -= 32;
-			i++;
+			isNewWord = 0;
 		}
 		else if (src[i] < 97 || src[i] > 122)
 		{
-			i++;
+			isNewWord = 0;
 		}
 	}
 	return (src);
