@@ -1,7 +1,7 @@
 #include "main.h"
 /**
- * leet - switchs out certain characters in a string
- * @scr: the given string
+ * leet - takes out out certain characters in a string
+ * @src: the given string
  * Return: the modified string
  */
 char *leet(char *src)
