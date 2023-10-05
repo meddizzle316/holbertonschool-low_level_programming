@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stddef.h>
+#include <stdio.h>
 /**
  * function name - function description
  * @parameters: description
@@ -13,8 +14,8 @@ char *_strchr(char *s, char c)
 	{
 		if (s[i] == c)
 		{
-			return (char *) s;
+			return (char *) s + i;
 		}
 	}
-	return (NULL);
+	return (0);
 }
