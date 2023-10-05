@@ -23,12 +23,12 @@ char *_strstr(char *haystack, char *needle)
 				storex = x;
 				while (haystack[i] == needle[x] && x < lenofneedle)
 				{
-					i++;
-					x++;
 					if (x == lenofneedle - 1)
 					{
 						return (char *) haystack + storei;
 					}
+					i++;
+					x++;
 				}
 				i = storei;
 				x = storex;
