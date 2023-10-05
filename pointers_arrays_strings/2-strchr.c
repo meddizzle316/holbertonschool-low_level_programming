@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stddef.h>
 /**
  * function name - function description
  * @parameters: description
@@ -7,24 +8,13 @@
 char *_strchr(char *s, char c)
 {
 	int i;
-	int hasChar;
 
 	for (i = 0; s[i]; i++)
 	{
 		if (s[i] == c)
 		{
-			hasChar = 1;
-			*s = *(s + i);
-			break;
+			return (char *) s;
 		}
 	}
-
-	if (hasChar == 1)
-	{
-		return (s);
-	}
-	else
-	{
-		return (0);
-	}
+	return (NULL);
 }
