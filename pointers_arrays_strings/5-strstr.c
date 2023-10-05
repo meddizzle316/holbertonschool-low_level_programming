@@ -29,9 +29,9 @@ char *_strstr(char *haystack, char *needle)
 					{
 						return (char *) haystack + storei;
 					}
-					i = storei;
-					x = storex;
 				}
+				i = storei;
+				x = storex;
 			}
 		}
 	}
