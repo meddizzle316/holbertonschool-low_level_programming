@@ -21,9 +21,9 @@ char *_strstr(char *haystack, char *needle)
 			{
 				storei = i;
 				storex = x;
-				while (haystack[i] == needle[x] && x < lenofneedle)
+				while (haystack[i] == needle[x])
 				{
-					if (x == lenofneedle - 1)
+					if (haystack[i - 1] == needle[x - 1] && x == lenofneedle - 1)
 					{
 						return (char *) haystack + storei;
 					}
