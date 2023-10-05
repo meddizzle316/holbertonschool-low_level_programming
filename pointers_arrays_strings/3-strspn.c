@@ -16,6 +16,7 @@ unsigned int _strspn(char *s, char *accept)
 		if (noMatch == 1)
 		{
 			break;
+		}
 			for (x = 0; accept[x]; x++)
 			{
 				if (s[i] == accept[x])
@@ -28,7 +29,6 @@ unsigned int _strspn(char *s, char *accept)
 					noMatch = 1;
 				}
 			}
-		}
 	}
 	return (j);
 }
