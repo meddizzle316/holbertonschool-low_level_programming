@@ -6,18 +6,27 @@
  */
 unsigned int _strspn(char *s, char *accept)
 {
-	int i, x;
+	int i, x, noMatch;
 	unsigned int j;
 
 	j = 0;
+	noMatch = 0;
 	for (i = 0; s[i]; i++)
 	{
-		for (x = 0; accept[x]; x++)
+		if (noMatch == 1)
 		{
-			if (s[i] == accept[x])
+			break;
+			for (x = 0; accept[x]; x++)
 			{
-				j++;
-				break;
+				if (s[i] == accept[x])
+				{
+					j++;
+					break;
+				}
+				else
+				{
+					noMatch = 1;
+				}
 			}
 		}
 	}
