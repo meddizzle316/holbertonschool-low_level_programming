@@ -34,7 +34,7 @@ char *_strstr(char *haystack, char *needle)
 				i = storei;
 				x = storex;
 			}
-			if (needle[x] == ' ')
+			if (needle[x] == '\0')
 			{
 				return (char *) haystack + i;
 			}
