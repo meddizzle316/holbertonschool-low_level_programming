@@ -9,11 +9,11 @@
 char *_strstr(char *haystack, char *needle)
 {
 	int i, x;
-	int storei, storex, lenofneedle;
+	int storei, storex, lenofneedle, lenofhaystack;
 
 	lenofneedle = _strlen(needle);
-
-	for (i = 0; haystack[i] != '\0'; i++)
+	lenofhaystack = _strlen(haystack);
+	for (i = 0; i <= lenofhaystack; i++)
 	{
 		for (x = 0; x <= lenofneedle; x++)
 		{
@@ -34,9 +34,12 @@ char *_strstr(char *haystack, char *needle)
 				i = storei;
 				x = storex;
 			}
-			if (needle[x] == '\0')
+			if (needle[x] == '\0' && haystack[i] == '\0')
 			{
-				return (char *) haystack + i;
+				if (lenofneedle == 0)
+				{
+					return (char *) haystack;
+				}
 			}
 		}
 	}
