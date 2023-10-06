@@ -17,7 +17,7 @@ void print_chessboard(char (*a)[8])
 			printf("%c", a[i][x]);
 			if (x == 7)
 			{
-				_putchar('\n');
+				printf("\n");
 			}
 		}
 	}
