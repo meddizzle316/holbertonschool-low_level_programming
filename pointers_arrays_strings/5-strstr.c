@@ -17,10 +17,6 @@ char *_strstr(char *haystack, char *needle)
 	{
 		for (x = 0; x < lenofneedle; x++)
 		{
-			if (needle[x] == '\0')
-			{
-				return (char *) haystack + i;
-			}
 
 			if (haystack[i] == needle[x])
 			{
@@ -37,6 +33,10 @@ char *_strstr(char *haystack, char *needle)
 				}
 				i = storei;
 				x = storex;
+			}
+			if (needle[x] == ' ')
+			{
+				return (char *) haystack + i;
 			}
 		}
 	}
