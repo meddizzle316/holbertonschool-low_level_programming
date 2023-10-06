@@ -15,8 +15,13 @@ char *_strstr(char *haystack, char *needle)
 
 	for (i = 0; haystack[i] != '\0'; i++)
 	{
-		for (x = 0; needle[x]; x++)
+		for (x = 0; x < lenofneedle; x++)
 		{
+			if (needle[x] == '\0')
+			{
+				return (char *) haystack + i;
+			}
+
 			if (haystack[i] == needle[x])
 			{
 				storei = i;
