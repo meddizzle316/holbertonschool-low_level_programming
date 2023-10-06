@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
  * function name - function description
  * @parameters: description
@@ -32,4 +33,5 @@ void print_diagsums(int *a, int size)
                   x--;
                 }
         }
+	printf("%d, %d\n", leftresult, rightresult);
 }
