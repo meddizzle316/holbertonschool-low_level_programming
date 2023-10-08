@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include "2-strlen.c"
 /**
- * _strstr - locates a substring
+ * _strst - locates a substring
  * @haystack: a string
  * @needle: the substring we're checking the string to see if it's in there
  *
