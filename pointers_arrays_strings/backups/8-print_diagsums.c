@@ -27,7 +27,7 @@ void print_diagsums(int *a, int size)
 	{
 		row = i / (size + 1);
 		col = i % (size);
-		
+
 		if (col == x)
 		{
 			rightresult += a[i];

@@ -14,24 +14,16 @@ void print_diagsums(int *a, int size)
 	leftresult = rightresult = x = 0;
 	for (i = 0; i < size * size; i++)
 	{
-		row = i / (size + 1);
+		row = i / (size);
 		col = i % (size);
-		if (row == x)
+		if (row == col)
 		{
 			leftresult += a[i];
-			x++;
 		}
-	}
-	x = size - 1;
-	for (i = 0; i < size * size; i++)
-	{
-		row = i / (size + 1);
-		col = i % (size);
-
-		if (col == x)
+		if (col == size - x - 1)
 		{
 			rightresult += a[i];
-			x--;
+			x++;
 		}
 	}
 	printf("%d, %d\n", leftresult, rightresult);
