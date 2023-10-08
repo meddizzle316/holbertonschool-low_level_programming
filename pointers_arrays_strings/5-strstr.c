@@ -22,14 +22,14 @@ char *_strstr(char *haystack, char *needle)
 			haystack++;
 			needle++;
 		}
+		if (*needle == '\0')
+		{
+			return (temp);
+		}
 		if (*needle != *haystack)
 		{
 			haystack = temp;
 			needle = thimble;
-		}
-		if (*needle == '\0')
-		{
-			return (temp);
 		}
 		haystack++;
 	}
