@@ -13,6 +13,7 @@ char *_strstr(char *haystack, char *needle)
 	int i, x;
 	int storei, storex, lenofneedle, lenofhaystack;
 
+	x = 0;
 	lenofneedle = _strlen(needle);
 	lenofhaystack = _strlen(haystack);
 	for (i = 0; i <= lenofhaystack; i++)
@@ -21,17 +22,19 @@ char *_strstr(char *haystack, char *needle)
 		{
 			continue;
 		}
+		storei = i;
+		storex = x;
 		while (haystack[i] == needle[x])
 		{
-			storei = i;
-			storex = x;
 			if (haystack [i - 1] == needle[x - 1] && x == lenofneedle - 1)
 			{
 				return (char *) (haystack + storei);
 			}
-			i = storei;
-			x = storex;
+			i++;
+			x++;
 		}
+		i = storei;
+		x = storex;
 		if (lenofneedle == 0)
 		{
 			return (char *) (haystack);
