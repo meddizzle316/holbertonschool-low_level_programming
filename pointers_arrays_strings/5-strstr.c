@@ -10,14 +10,18 @@
  */
 char *_strstr(char *haystack, char *needle)
 {
-	while (*haystack)
-	{
-		char *temp;
-		char *thimble;
+	char *temp;
+	char *thimble;
 
+	while(*haystack)
+	{
 		temp = haystack;
 		thimble = needle;
-		while (*needle == *haystack)
+		if (*haystack != *needle)
+		{
+			continue;
+		}
+		while (*haystack == *needle)
 		{
 			haystack++;
 			needle++;
@@ -26,7 +30,7 @@ char *_strstr(char *haystack, char *needle)
 		{
 			return (temp);
 		}
-		if (*needle != *haystack)
+		if (*haystack != *needle)
 		{
 			haystack = temp;
 			needle = thimble;
