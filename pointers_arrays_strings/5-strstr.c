@@ -17,10 +17,6 @@ char *_strstr(char *haystack, char *needle)
 	{
 		temp = haystack;
 		thimble = needle;
-		if (*haystack != *needle)
-		{
-			continue;
-		}
 		while (*haystack == *needle)
 		{
 			haystack++;
