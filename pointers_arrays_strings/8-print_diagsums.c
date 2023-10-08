@@ -9,22 +9,16 @@
  */
 void print_diagsums(int *a, int size)
 {
-	int leftresult, rightresult, i, x, row, col;
+	int leftresult, rightresult, i, x, y;
 
 	leftresult = rightresult = x = 0;
+	y = size - 1;
 	for (i = 0; i < size * size; i++)
 	{
-		row = i / (size);
-		col = i % (size);
-		if (row == col)
-		{
-			leftresult += a[i];
-		}
-		if (col == size - x - 1)
-		{
-			rightresult += a[i];
-			x++;
-		}
+		leftresult += *(a + i * size + x);
+		rightresult += *(a + i * size - y);
+		x++;
+		y--;
 	}
 	printf("%d, %d\n", leftresult, rightresult);
 }
