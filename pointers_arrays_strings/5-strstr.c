@@ -13,15 +13,19 @@ char *_strstr(char *haystack, char *needle)
 	while (*haystack)
 	{
 		char *temp;
+		char *thimble;
 
 		temp = haystack;
+		thimble = needle;
 		while (*needle == *haystack)
 		{
-			if (*(needle - 1) == *(haystack - 1))
-			{
-				haystack++;
-				needle++;
-			}
+			haystack++;
+			needle++;
+		}
+		if (*needle != *haystack)
+		{
+			haystack = temp;
+			needle = thimble;
 		}
 		if (*needle == '\0')
 		{
