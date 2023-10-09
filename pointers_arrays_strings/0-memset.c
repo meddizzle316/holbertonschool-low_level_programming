@@ -2,10 +2,10 @@
 /**
  * _memset - fills memory with a constant byte
  * @s: a given pointer to a array
- * @b: the given byte to set memory to 
+ * @b: the given byte to set memory to
  * @n: how many bytes to set memory
  *
- * Return: 
+ * Return: a pointer to the memory area s
  */
 char *_memset(char *s, char b, unsigned int n)
 {
