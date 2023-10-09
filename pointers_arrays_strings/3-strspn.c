@@ -1,10 +1,10 @@
 #include "main.h"
 /**
- * _strspn: gets the length of a prefix substring
+ * _strspn - gets the length of a prefix substring
  * @s: given pointer to a string
  * @accept: substring
  *
- * Return: return value
+ * Return: the length of a prefix substring
  */
 unsigned int _strspn(char *s, char *accept)
 {
