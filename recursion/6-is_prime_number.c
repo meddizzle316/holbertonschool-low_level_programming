@@ -30,6 +30,7 @@ int helper(int n, int m)
 
 int is_prime_number(int n)
 {
-	int m = helper (n, 2);
+	int m = helper(n, 2);
+
 	return (m);
 }
