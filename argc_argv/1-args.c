@@ -6,12 +6,13 @@
  * @argv: the array in which arguments are kept, of size argc
  * Return: number of arguments
  */
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
 	int i;
 
-	for (i = 0; *argv; i++)
+	for (i = 0; argv[i]; i++)
 	{
 	}
 	printf("%d\n", argc);
+	return (0);
 }
