@@ -1,3 +1,7 @@
 #!/bin/bash
-gcc -c "*.c" -o main.o   
-ar -rcs liball.a main.o
+
+for i in *.c
+do
+	gcc -c "$i" -o "${i%.c}.o"
+	ar -rcs liball.a "${i%.c}.o"
+done
