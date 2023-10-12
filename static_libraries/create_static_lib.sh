@@ -1,3 +1,3 @@
 #!/bin/bash
-gcc -c '*.c'   
-ar -rcs liball.a a.out
+gcc -c *.c -o main.o   
+ar -rcs liball.a main.o
