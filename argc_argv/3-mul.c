@@ -18,8 +18,8 @@ int main(int argc, char *argv[])
 	{
 		int res, num1, num2;
 
-		num1 = strtol(argv[argc - 2],NULL,10);
-		num2 = strtol(argv[argc - 1],NULL,10);
+		num1 = strtol(argv[argc - 2], NULL, 10);
+		num2 = strtol(argv[argc - 1], NULL, 10);
 		res = num1 * num2;
 		printf("%d\n", res);
 	}
