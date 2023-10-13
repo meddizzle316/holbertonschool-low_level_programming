@@ -13,11 +13,15 @@
 int main(int argc, char *argv[])
 {
 	long int i, x, res;
+	char *end;
 
 	for (i = 1; i < argc; i++)
 	{
-		x = strtol(argv[i], NULL, 10);
-		res += x;
+		x = strtol(argv[i], &end, 10);
+		if (*end == ' ')
+		{
+			res += x;
+		}
 	}
 	printf("%ld\n", res);
 	return (0);
