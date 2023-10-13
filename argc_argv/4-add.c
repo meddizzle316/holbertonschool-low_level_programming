@@ -24,8 +24,10 @@ int main(int argc, char *argv[])
 		else
 		{
 			printf("Error");
+			break;
 		}
-		printf("%d\n", res);
+
 	}
+	printf("%d", res);
 	return (0);
 }
