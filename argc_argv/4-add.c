@@ -19,6 +19,6 @@ int main(int argc, char *argv[])
 		x = atoi(argv[i]);
 		res += x;
 	}
-	printf("%d", res);
+	printf("%d\n", res);
 	return (0);
 }
