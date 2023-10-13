@@ -22,6 +22,7 @@ int main(int argc, char *argv[])
 		if (*end != '\0')
 		{
 			printf("Error");
+			break;
 		}
 		else
 		{
