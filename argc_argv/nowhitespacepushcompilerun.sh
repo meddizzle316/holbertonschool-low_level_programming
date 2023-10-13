@@ -1,8 +1,13 @@
 #!/usr/bin/env bash
-sed --in-place 's/[[:space:]]\+$//' "$1"
-gcc -Wall -pedantic -Werror -Wextra -std=gnu89 "$1" -o "${1%.c}.o"
-./"${1%.c}.o"
-mv "${1%.c}.o" backups/
+input="$1"
+output="${1%.c}.o"
+destination="backups/"
+comment="$2"
+
+sed --in-place 's/[[:space:]]\+$//' "$input"
+gcc -Wall -pedantic -Werror -Wextra -std=gnu89 "$input" -o "$output"
+./"$output"
+mv "$output" "$destination"
 git add .
-git commit -m "$2"
+git commit -m "$comment"
 git push
