@@ -12,13 +12,14 @@
  */
 int main(int argc, char *argv[])
 {
-	int i, x, res;
+	long int i, x, res;
+	char *end;
 
 	for (i = 1; i < argc; i++)
 	{
-		x = atoi(argv[i]);
+		x = strtol(argv[i], &end, 10);
 		res += x;
 	}
-	printf("%d\n", res);
+	printf("%ld\n", res);
 	return (0);
 }
