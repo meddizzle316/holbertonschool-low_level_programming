@@ -12,20 +12,20 @@
  */
 int main(int argc, char *argv[])
 {
-	int i, x;
+	int i, x, res;
 
 	for (i = 1; i < argc; i++)
 	{
 		if (isdigit(argv[i]))
 		{
-			printf("this is a digit at the index of %d", i);
+			x = atoi(argv[i]);
+			res += x;
 		}
 		else
 		{
-			printf("This is not a digit at the index of %d", i);
+			printf("Error");
 		}
-		x = atoi(argv[i]);
-		printf("%d\n", x);
+		printf("%d\n", res);
 	}
 	return (0);
 }
