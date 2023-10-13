@@ -17,6 +17,11 @@ int main(int argc, char *argv[])
 	char *end;
 
 	res = 0;
+	if (argc == 1)
+	{
+		printf("%d\n", res);
+		return (0);
+	}
 	for (i = 1; i < argc; i++)
 	{
 		conv = strtol(argv[i], &end, 10);
