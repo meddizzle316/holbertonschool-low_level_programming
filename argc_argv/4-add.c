@@ -3,6 +3,7 @@
 #include <ctype.h>
 #include <stdlib.h>
 #include <stddef.h>
+#include <string.h>
 /**
  * main - adds positive numbers
  * @argc -- number of arguments
@@ -15,16 +16,17 @@ int main(int argc, char *argv[])
 
 	for (i = 1; i < argc; i++)
 	{
-
-		if (isdigit(argv[i]))
-		{
-			x = strtol(argv[i], NULL, 10);
-			x += x + x;
-		}
-		else
-		{
-			printf("Error\n");
-		}
+		x = atoi(argv[i]);
+		printf("%d\n", x);
 	}
+	//	else
+	//	{
+	//		x = strtol(argv[i], NULL, 10);
+	//		x += x + x;
+	//	}
+	//	else
+	//	{
+	//		printf("Error\n");
+	//	}
 	return (0);
 }
