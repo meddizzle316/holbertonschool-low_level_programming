@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-gcc -Wall -pedantic -Werror -Wextra -std=gnu89 $1
+gcc -Wall -pedantic -Werror -Wextra -std=gnu89 "$1"
