@@ -5,9 +5,9 @@
 #include <stddef.h>
 #include <string.h>
 /**
- * main - adds positive numbers
- * @argc -- number of arguments
- * @argv - array in which arguments are stored
+ * mai? - adds positive numbers
+ * @argc: number of arguments
+ * @argv: array in which arguments are stored
  * Return: result of positive numbers
  */
 int main(int argc, char *argv[])
