@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "main.h"
 #include <stddef.h>
+#include <stdlib.h>
 /**
  * main - multiplies two numbers
  * @argc: number of arguments including program name
@@ -15,13 +16,12 @@ int main(int argc, char *argv[])
 	}
 	else
 	{
-		long int res, num1, num2;
+		int res, num1, num2;
 
-		num1 = (long int) argv[1];
-		num2 = (long int) argv[2];
+		num1 = strtol(argv[1],NULL,10);
+		num2 = strtol(argv[2],NULL,10);
 		res = num1 + num2;
-		printf("%ld\n", res);
-
+		printf("%d\n", res);
 	}
 	return (0);
 }
