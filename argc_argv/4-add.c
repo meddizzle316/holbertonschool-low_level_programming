@@ -19,14 +19,5 @@ int main(int argc, char *argv[])
 		x = atoi(argv[i]);
 		printf("%d\n", x);
 	}
-	//	else
-	//	{
-	//		x = strtol(argv[i], NULL, 10);
-	//		x += x + x;
-	//	}
-	//	else
-	//	{
-	//		printf("Error\n");
-	//	}
 	return (0);
 }
