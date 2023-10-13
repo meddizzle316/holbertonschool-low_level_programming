@@ -30,6 +30,13 @@ int main(int argc, char *argv[])
 			res += x;
 		}
 	}
-	printf("%d\n", res);
-	return (0);
+	if (*end != '\0')
+	{
+		return (0);
+	}
+	else
+	{
+		printf("%d\n", res);
+		return (0);
+	}
 }
