@@ -12,17 +12,23 @@
  */
 int main(int argc, char *argv[])
 {
-	long int i, x, res;
+	int i, res, x;
+	long conv;
 	char *end;
 
 	for (i = 1; i < argc; i++)
 	{
-		x = strtol(argv[i], &end, 10);
-		if (*end == ' ')
+		conv = strtol(argv[i], &end, 10);
+		if (*end != '\0')
 		{
+			printf("Error");
+		}
+		else
+		{
+			x = conv;
 			res += x;
 		}
 	}
-	printf("%ld\n", res);
+	printf("%d\n", res);
 	return (0);
 }
