@@ -16,6 +16,7 @@ int main(int argc, char *argv[])
 	long conv;
 	char *end;
 
+	res = 0;
 	for (i = 1; i < argc; i++)
 	{
 		conv = strtol(argv[i], &end, 10);
