@@ -15,9 +15,10 @@ int main(int argc, char *argv[])
 
 	for (i = 1; i < argc; i++)
 	{
-		x = strtol(argv[i], NULL, 10);
-		if (isdigit(x))
+
+		if (isdigit(argv[i]))
 		{
+			x = strtol(argv[i], NULL, 10);
 			x += x + x;
 		}
 		else
