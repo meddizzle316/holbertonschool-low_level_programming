@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 		conv = strtol(argv[i], &end, 10);
 		if (*end != '\0')
 		{
-			printf("Error");
+			printf("Error\n");
 			break;
 		}
 		else
