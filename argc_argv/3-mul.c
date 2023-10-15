@@ -3,7 +3,7 @@
 #include <stddef.h>
 #include <stdlib.h>
 /**
- * mai? - multiplies two numbers
+ * main - multiplies two numbers
  * @argc: number of arguments including program name
  * @argv: array in which arguments are held of size argc
  * Return: result of two multiplied numbers or Error and -1 if no numbers
