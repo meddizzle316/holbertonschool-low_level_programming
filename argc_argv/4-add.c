@@ -5,7 +5,7 @@
 #include <stddef.h>
 #include <string.h>
 /**
- * mai? - adds positive numbers
+ * main - adds positive numbers
  * @argc: number of arguments
  * @argv: array in which arguments are stored
  * Return: result of positive numbers
