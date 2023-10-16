@@ -4,25 +4,29 @@
  * @n: given number
  * Return: the square root or -1
  */
-float helper(int n, float m, float temp)
+int helper(int n, int m)
 {
-	if (m == temp)
+	if (n == 1)
+	{
+		return (n);
+	}
+	else if (m <= 1)
+	{
+		return (-1);
+	}
+	else if (n / m == m && n % m == 0)
 	{
 		return (m);
 	}
 	else
 	{
-		temp = m;
-		m = (n/temp + temp) / 2;
-		return helper(n, m, temp);
+		return (helper(n, m - 1));
 	}
-
 }
 
 int _sqrt_recursion(int n)
 {
-	float temp = 0;
-	float m = helper(n, (n/2), temp);
+	int m = helper(n, n);
 
 	return (m);
 }
