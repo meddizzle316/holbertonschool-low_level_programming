@@ -13,14 +13,15 @@ float helper(int n, float m, float temp)
 	else
 	{
 		temp = m;
-		m = (n/temp + temp) / 2;
-		return helper(n, m, temp);
+		m = (n / temp + temp) / 2;
+		return (helper(n, m, temp));
 	}
 }
 
 int _sqrt_recursion(int n)
 {
 	float temp = 0;
+
 	if (n < 1)
 	{
 		return (-1);
@@ -31,7 +32,7 @@ int _sqrt_recursion(int n)
 	}
 	else
 	{
-		float m = helper(n, (n/2), temp);
+		float m = helper(n, (n / 2), temp);
 		return (m);
-        }
+	}
 }
