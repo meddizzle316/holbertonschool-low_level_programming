@@ -24,8 +24,7 @@ int _sqrt_recursion(int n)
         float temp = 0;
         if (n < 1)
         {
-          float m = helper(-n, (-n/2), temp);
-          return (-m);
+          return (-1);
         }
         if (n == 1)
         {
