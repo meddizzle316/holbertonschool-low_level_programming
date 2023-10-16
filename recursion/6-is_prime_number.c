@@ -1,7 +1,8 @@
 #include "main.h"
 /**
- * is_prime_number - finds if n is a prime number, 0 if not
+ * helper - finds if n is a prime number, 0 if not
  * @n: given number
+ * @m: counter starts at 2
  * Return: 1 if prime, 0 if not
  */
 int helper(int n, int m)
@@ -27,7 +28,12 @@ int helper(int n, int m)
 		return (helper(n, m + 1));
 	}
 }
-
+/**
+ * is_prime_number - finds if number is prime
+ * @n: given number
+ *
+ * Return: true (1) or false (0)
+ */
 int is_prime_number(int n)
 {
 	int m = helper(n, 2);
