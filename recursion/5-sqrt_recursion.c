@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * helpe? - finds the natural square root of n, else -1
+ * helper - finds the natural square root of n, else -1
  * @n: given number
  * @m: sqrt
  * @temp: temp variable
