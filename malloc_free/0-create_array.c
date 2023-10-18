@@ -10,20 +10,20 @@
  */
 char *create_array(unsigned int size, char c)
 {
+
+	char new_array[size];
+	char *ptr = new_array;
+	unsigned int i;
+
 	if (size <= 0)
 	{
 		return (NULL);
 	}
 
-	char new_array[] = {};
-
-	unsigned int i;
-
 	for (i = 0; i < size; i++)
 	{
 		new_array[i] = c;
 	}
-	char *ptr = new_array;
 
 	return (ptr);
 }
