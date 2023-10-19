@@ -25,12 +25,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	len1 = _strlen(s1);
 	len2 = _strlen(s2);
-	totlen = len1 + n;
   	if (n >= len2)
 	{
 		n = len2;
 	}
-
+	totlen = len1 + n;
 	new_string = (char *) malloc(sizeof(char) * totlen);
 	if (new_string == NULL)
 	{
