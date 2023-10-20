@@ -22,6 +22,11 @@ int *array_range(int min, int max)
 	{
 		length = -((max - min) - 1);
 	}
+	else if (max < 0 || min < 0)
+	{
+		length = ((max - min) + 1);
+	}
+
 
 	new_array = (int *)malloc(sizeof(int) * length);
 	if (min > max || new_array == NULL)
