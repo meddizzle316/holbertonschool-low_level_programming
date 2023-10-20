@@ -4,9 +4,8 @@
  *
  * Return: name of file it was compiled from
  */
-int main ()
+int main (int argc, char ** argv)
 {
-	char file_name[] = "2-main.c";
-	printf("%s\n",file_name);
+	printf("%s\n", argv[argc - 1]);
 	return (0);
 }
