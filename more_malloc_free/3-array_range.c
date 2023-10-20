@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stddef.h>
+#include <string.h>
 /**
  * array_range - creates an array of integers
  * @min: minimum value in array
@@ -17,10 +18,6 @@ int *array_range(int min, int max)
 	if (max >= 0 && min >= 0)
 	{
 		length = (max - min) + 1;
-	}
-	if (max < 0 && min < 0)
-	{
-		length = -1 * ((max - min) - 1);
 	}
 	else if (max < 0 || min < 0)
 	{
