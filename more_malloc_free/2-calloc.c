@@ -11,21 +11,17 @@
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	unsigned int i;
-	void **new_array;
-	int *ptr;
-	int zero;
+	char *new_array;
 
-	zero = 0;
-	ptr = &zero;
 	new_array = malloc((size * nmemb));
 	if (new_array == NULL || nmemb <= 0 || size <= 0)
 	{
 		free(new_array);
 		return (NULL);
 	}
-	for (i = 0; i < nmemb; new_array++)
+	for (i = 0; i < (nmemb * size); new_array++)
 	{
-		new_array[i] = ptr;
+		new_array[i] = 0;
 	}
 	return (new_array);
 }
