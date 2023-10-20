@@ -13,7 +13,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	unsigned int i;
 	char *new_array;
 
-	new_array = malloc(size * nmemb);
+	new_array = malloc((size * nmemb) + 1);
 	if (new_array == NULL || nmemb <= 0 || size <= 0)
 	{
 		free(new_array);
