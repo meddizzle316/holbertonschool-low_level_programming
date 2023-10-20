@@ -19,10 +19,9 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		free(new_array);
 		return (NULL);
 	}
-	for (i = 0; new_array[i]; i++)
+	for (i = 0; i < nmemb; i++)
 	{
 		new_array[i] =  0;
 	}
-	new_array[i] = '\0';
 	return (new_array);
 }
