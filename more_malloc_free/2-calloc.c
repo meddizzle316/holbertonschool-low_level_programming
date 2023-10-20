@@ -23,5 +23,6 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	{
 		new_array[i] = 0;
 	}
+	new_array = (void *)new_array;
 	return (new_array);
 }
