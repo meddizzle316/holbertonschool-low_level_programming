@@ -10,18 +10,19 @@
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
+	unsigned int i;
 	char *new_array;
 
-	new_array = (char *) malloc((size * nmemb) + 1);
+	new_array = malloc((size * nmemb) + 1);
 	if (new_array == NULL || nmemb <= 0 || size <= 0)
 	{
 		free(new_array);
 		return (NULL);
 	}
-	for ( ; new_array; new_array++)
+	for (i = 0; new_array[i]; i++)
 	{
-		*new_array = 0;
+		new_array[i] = 0;
 	}
-	*new_array = '\0';
+	new_array[i] = '\0';
 	return (new_array);
 }
