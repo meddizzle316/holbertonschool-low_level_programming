@@ -14,7 +14,7 @@ int *array_range(int min, int max)
 	int *new_array;
 	int length;
 
-	if (max > 0 && min > 0)
+	if (max >= 0 && min >= 0)
 	{
 		length = (max - min) + 1;
 	}
