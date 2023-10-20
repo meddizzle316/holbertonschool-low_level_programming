@@ -23,8 +23,12 @@ int *array_range(int min, int max)
 	{
 		length = ((max - min) + 1);
 	}
+	if (min > max)
+	{
+		return (NULL);
+	}
 	new_array = (int *)malloc(sizeof(int) * length);
-	if (min > max || new_array == NULL)
+	if (new_array == NULL)
 	{
 		free(new_array);
 		return (NULL);
