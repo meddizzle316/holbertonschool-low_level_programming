@@ -15,7 +15,11 @@ char *_strdup(char *str)
 	int len = _strlen(str);
 
 	new_string = malloc(sizeof(char) * (len + 1));
-	
+
+	if (str == "")
+	{
+		str == '\0';
+	}
 	if (str == NULL || new_string == NULL || len <= 0)
 	{
 		return ('\0');
