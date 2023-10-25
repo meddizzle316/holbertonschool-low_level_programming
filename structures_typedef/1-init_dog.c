@@ -10,13 +10,6 @@
  * Return: returns nothing
  */
 
-typedef struct
-{
-	char *name;
-	int age;
-	char *owner;
-} dog;
-
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
 
