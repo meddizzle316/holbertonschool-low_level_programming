@@ -9,8 +9,6 @@
  */
 void print_dog(struct dog *d)
 {
-	int i;
-
 	if (d != NULL)
 	{
 		if ((*d).name != NULL)
@@ -23,7 +21,7 @@ void print_dog(struct dog *d)
 		}
 		if ((*d).age != NULL)
 		{
-			printf("%d", (*d).age);
+			printf("%lf", (*d).age);
 		}
 		else
 		{
