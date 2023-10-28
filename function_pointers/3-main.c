@@ -7,11 +7,11 @@
  */
 int main(int argc, char **argv)
 {
-
 	int a;
 	int b;
 	int (*op)(int, int);
 	int result;
+
 	if (argc < 5)
 	{
 		a = atoi(argv[1]);
