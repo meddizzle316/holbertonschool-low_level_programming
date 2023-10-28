@@ -19,7 +19,17 @@ int main(int argc, char **argv)
 		b = atoi(argv[3]);
 		op = get_op_func(argv[2]);
 		result = op(a, b);
+		if (result == 0)
+		{
+			printf("Error\n");
+			exit (99);
+		}
 		printf("%d\n", result);
+	}
+	else
+	{
+		printf("Error\n");
+		exit(98);
 	}
 	return (0);
 }
