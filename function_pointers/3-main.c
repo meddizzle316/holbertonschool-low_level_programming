@@ -13,23 +13,10 @@ int main(int argc, char **argv)
 	int (*op)(int, int);
 	int result;
 
-	if (argc == 3)
-	{
-		a = atoi(argv[1]);
-		b = atoi(argv[3]);
-		op = get_op_func(argv[2]);
-		result = op(a, b);
-		if (result == 0)
-		{
-			printf("Error\n");
-			exit(99);
-		}
-		printf("%d\n", result);
-	}
-	else
-	{
-		printf("Error\n");
-		exit(98);
-	}
+	a = atoi(argv[1]);
+	b = atoi(argv[3]);
+	op = get_op_func(argv[2]);
+	result = op(a, b);
+	printf("%d\n", result);
 	return (0);
 }
