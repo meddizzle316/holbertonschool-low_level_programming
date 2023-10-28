@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
 	int (*op)(int, int);
 	int result;
 
-	if (argc < 5)
+	if (argc <= 100)
 	{
 		a = atoi(argv[1]);
 		b = atoi(argv[3]);
