@@ -7,15 +7,19 @@
  */
 int main(int argc, char **argv)
 {
+
 	int a;
 	int b;
 	int (*op)(int, int);
 	int result;
 
-	a = atoi(argv[1]);
-	b = atoi(argv[3]);
-	op = get_op_func(argv[2]);
-	result = op(a, b);
-	printf("%d\n", result);
+	if (argc == 3)
+	{
+		a = atoi(argv[1]);
+		b = atoi(argv[3]);
+		op = get_op_func(argv[2]);
+		result = op(a, b);
+		printf("%d\n", result);
+	}
 	return (0);
 }
