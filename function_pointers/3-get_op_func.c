@@ -24,7 +24,7 @@ int (*get_op_func(char *s))(int, int)
 	{
 		if (s[0] == ops[i].op[0] && strlen(s) == strlen(ops[i].op))
 		{
-			return (ops[i].f); 
+			return (ops[i].f);
 		}
 		i++;
 	}

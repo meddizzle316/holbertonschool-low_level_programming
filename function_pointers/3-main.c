@@ -1,6 +1,6 @@
 #include "3-calc.h"
 /**
- * main - running the code for basic cal program
+ * mai? - running the code for basic cal program
  * @argc: number of arguments
  * @argv: array in which arguments are stored
  * Return: Always 0.
@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
 	int result;
 	int (*op)(int, int);
 
-	if (argc == 4)	
+	if (argc == 4)
 	{
 		a = atoi(argv[1]);
 		b = atoi(argv[argc - 1]);
@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
 		result = op(a, b);
 		printf("%d\n", result);
 	}
-	else 
+	else
 	{
 		printf("Error\n");
 		exit(98);
