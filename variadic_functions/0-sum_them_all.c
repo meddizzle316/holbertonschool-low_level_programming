@@ -6,11 +6,11 @@
  * Return: return value
  */
 int sum_them_all(const unsigned int n, ...)
-{	
+{
 	int x;
 	unsigned int i;
+
 	va_list(args);
-	
 	x = 0;
 	va_start(args, n);
 	for (i = 0; i < n; i++)
