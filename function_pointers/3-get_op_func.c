@@ -20,7 +20,7 @@ int (*get_op_func(char *s))(int, int)
 		{NULL, NULL}
 	};
 	i = 0;
-	while (i < 6)
+	while (i < 5)
 	{
 		printf("The result of s: %s and the length is %lu\n", s, strlen(s));
 		printf("The result of ops[%d] is %s and the length is %lu\n", i, ops[i].op, strlen(ops[i].op));
@@ -31,5 +31,5 @@ int (*get_op_func(char *s))(int, int)
 		}
 		i++;
 	}
-	return (NULL);
+	return (ops[i].f);
 }
