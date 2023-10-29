@@ -9,14 +9,20 @@ int main(int argc, char *argv[])
 {
 	int a;
 	int b;
-	int (*op)(int, int);
 	int result;
+	int (*op)(int, int);
 		
 	a = atoi(argv[1]);
 	printf("%d\n", a);
 	b = atoi(argv[argc - 1]);
 	printf("%d\n", b);
+	printf("%s\n", argv[2]);
 	op = get_op_func(argv[2]);
+	if (op == NULL)
+	{
+		printf("Error\n");
+		exit(99);
+	}
 	result = op(a, b);
 	printf("%d\n", result);
 	return (0);
