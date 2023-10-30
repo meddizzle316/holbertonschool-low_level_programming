@@ -1,6 +1,6 @@
 #include "variadic_functions.h"
 /**
- * print_strings - prints strings followed by newline
+ * print_string? - prints strings followed by newline
  * @separator: separator between strings
  * @n: number of strings passed
  * @...: ellipse representing variable functions
@@ -9,6 +9,7 @@
 void print_strings(const char *separator, const unsigned int n, ...)
 {
 	unsigned int i;
+	const char *placeholder;
 
 	va_list(args);
 	va_start(args, n);
@@ -17,10 +18,21 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	{
 		if (i < n - 1)
 		{
-			printf("%s", va_arg(args, const char *));
-			printf("%s", separator);
+			placeholder = va_arg(args, const char*);
+			if (placeholder != NULL)
+			{
+				printf("%s", placeholder);
+			}
+			else
+			{
+				printf(NULL);
+			}
+			if (separator != NULL)
+			{
+				printf("%s", separator);
+			}
 		}
-		else if ( i == n - 1)
+		else if (i == n - 1)
 		{
 			printf("%s", va_arg(args, const char *));
 		}
