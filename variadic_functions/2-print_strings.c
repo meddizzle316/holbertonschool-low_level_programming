@@ -14,10 +14,10 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	va_list(args);
 	va_start(args, n);
 
-	for (i = 0; i < n - 1; i++)
+	for (i = 0; i < n; i++)
 	{
 		placeholder = va_arg(args, char*);
-		if (i < n - 2)
+		if (i < n - 1)
 		{
 			if (placeholder != NULL)
 			{
@@ -32,11 +32,11 @@ void print_strings(const char *separator, const unsigned int n, ...)
 				printf("%s", separator);
 			}
 		}
-		else if (i == n - 2 && placeholder != NULL)
+		else if (i == n - 1 && placeholder != NULL)
 		{
 			printf("%s", va_arg(args, const char *));
 		}
-		else if (i == n - 2 && placeholder == NULL)
+		else if (i == n - 1 && placeholder == NULL)
 		{
 			printf("(nil)");
 		}
