@@ -1,4 +1,15 @@
 #include "variadic_functions.h"
+void print_char_string (char * placeholder)
+{
+	printf("%s", placeholder);
+}
+
+void print_int (int placeholder)
+{
+	printf("%d", placeholder);
+}
+
+
 /**
  * print_all - a function that prints anything
  * @format: a list of types of arguments passed to the function
@@ -10,33 +21,22 @@ void print_all(const char * const format, ...)
 	int i;
 	char *char_placeholder;
 	int int_placeholder;
-	double double_placeholder;
+	va_list(ap);
 
 	i = 0;
-	va_list(ap);
 	va_start(ap, format);
 	while (format[i] != '\0')
 	{
-		if (format[i] == 'c')
+		char_placeholder = va_arg(ap, char *);
+		int_placeholder = va_arg(ap, int);
+		while (format[i] == 'c' || format[i] == 's')
 		{
-			char_placeholder = va_arg(ap, char *);
-			printf("%s", char_placeholder);
+			print_char_string(char_placeholder);
 		}
-		else if (format[i] == 'i')
+		if (format[i] == 'i' || format[i] == 'f')
 		{
-			int_placeholder = va_arg(ap, int);
-			printf("%d", int_placeholder);
-		}
-		else if (format[i] == 'f')
-		{
-			double_placeholder = va_arg(ap, double);
-			printf("%lf", double_placeholder);
-		}
-		else if (format[i] == 's')
-		{
-			char_placeholder = va_arg(ap, char *);
-			printf("%s", char_placeholder);
-		}
+			print_int(int_placeholder);
+		}	
 		if (format[i + 1] != '\0' && ((format[i] == 's' 
 		|| format[i] == 'c' 
 		|| format[i] == 'i' 
@@ -46,4 +46,5 @@ void print_all(const char * const format, ...)
 		}
 		i++;
 	}
+	va_end(ap);
 }
