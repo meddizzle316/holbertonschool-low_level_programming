@@ -2,9 +2,6 @@
 
 int main (void)
 {
-	int result;
-
-	result = sum_them_all(5, 1, 2, 3, 4, 5);
-	printf("%d\n", result);
+	print_numbers(",", 4, 0, 98, -1024, 402);
 	return (0);
 }
