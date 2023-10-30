@@ -1,4 +1,5 @@
 #include "variadic_functions.h"
+#include <ctype.h>
 /**
  * print_numbers - prints numbers followed by newline
  * @separator: string to be printed between numbers
@@ -11,7 +12,10 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	unsigned int i;
 	int x;
 	va_list(args);
-	
+
+	printf("%d\n", n);
+
+	x = 0;
 	va_start(args, n);
 	for (i = 0; i < n; i++)
 	{
