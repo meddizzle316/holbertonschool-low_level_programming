@@ -16,9 +16,9 @@ void print_strings(const char *separator, const unsigned int n, ...)
 
 	for (i = 0; i < n - 1; i++)
 	{
+		placeholder = va_arg(args, char*);
 		if (i < n - 2)
 		{
-			placeholder = va_arg(args, char*);
 			if (placeholder != NULL)
 			{
 				printf("%s", placeholder);
