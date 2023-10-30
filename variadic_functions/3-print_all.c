@@ -27,14 +27,14 @@ void print_all(const char * const format, ...)
 	va_start(ap, format);
 	while (format[i] != '\0')
 	{
-		char_placeholder = va_arg(ap, char *);
-		int_placeholder = va_arg(ap, int);
 		while (format[i] == 'c' || format[i] == 's')
 		{
+			char_placeholder = va_arg(ap, char *);
 			print_char_string(char_placeholder);
 		}
 		if (format[i] == 'i' || format[i] == 'f')
 		{
+			int_placeholder = va_arg(ap, int);
 			print_int(int_placeholder);
 		}	
 		if (format[i + 1] != '\0' && ((format[i] == 's' 
