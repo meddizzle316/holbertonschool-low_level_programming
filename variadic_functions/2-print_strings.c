@@ -9,7 +9,7 @@
 void print_strings(const char *separator, const unsigned int n, ...)
 {
 	unsigned int i;
-	const char *placeholder;
+	char *placeholder;
 
 	va_list(args);
 	va_start(args, n);
@@ -18,7 +18,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	{
 		if (i < n - 1)
 		{
-			placeholder = va_arg(args, const char*);
+			placeholder = va_arg(args, char*);
 			if (placeholder != NULL)
 			{
 				printf("%s", placeholder);
