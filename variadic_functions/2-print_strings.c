@@ -25,16 +25,20 @@ void print_strings(const char *separator, const unsigned int n, ...)
 			}
 			else
 			{
-				fputs("(nil)", stdout);
+				printf("(nil)");
 			}
 			if (separator != NULL)
 			{
 				printf("%s", separator);
 			}
 		}
-		else if (i == n - 1)
+		else if (i == n - 1 && placeholder != NULL)
 		{
 			printf("%s", va_arg(args, const char *));
+		}
+		else if (i == n - 1 && placeholder == NULL)
+		{
+			printf("(nil)");
 		}
 
 	}
