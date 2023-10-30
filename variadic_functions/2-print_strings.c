@@ -18,7 +18,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		if (i < n - 1)
 		{
 			printf("%s", va_arg(args, const char *));
-			printf("%s ", separator);
+			printf("%s", separator);
 		}
 		else if ( i == n - 1)
 		{
