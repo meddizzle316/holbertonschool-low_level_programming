@@ -29,6 +29,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 				printf("%d", x);	
 			}
 		}
+		putchar('\n');
 		va_end(args);
 	}
 }
