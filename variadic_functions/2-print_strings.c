@@ -25,7 +25,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 			}
 			else
 			{
-				printf("%p", placeholder);
+				printf("%p", NULL);
 			}
 			if (separator != NULL)
 			{
