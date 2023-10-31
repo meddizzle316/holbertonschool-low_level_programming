@@ -8,7 +8,8 @@
 void print_all(const char * const format, ...)
 {
 	int i;
-	char *char_placeholder;
+	char char_placeholder;
+	char *string_placeholder;
 	int int_placeholder;
 	double float_placeholder;
 	va_list(ap);
@@ -19,16 +20,16 @@ void print_all(const char * const format, ...)
 	{
 		switch(format[i]) {
 		case 'c':
-			char_placeholder = va_arg(ap, char*);
-			printf("%s", char_placeholder);
+			char_placeholder = va_arg(ap, int);
+			printf("%c", char_placeholder);
 			break;
 		case 'i':
 			int_placeholder = va_arg(ap, int);
 			printf("%d", int_placeholder);
 			break;
 		case 's':
-			char_placeholder = va_arg(ap, char *);
-			printf("%s", char_placeholder);
+			string_placeholder = va_arg(ap, char *);
+			printf("%s", string_placeholder);
 			break;
 		case 'f':
 			float_placeholder = va_arg(ap, double);
