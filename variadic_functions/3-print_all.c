@@ -31,11 +31,6 @@ void print_all(const char * const format, ...)
 				break;
 			case 's':
 				string_placeholder = va_arg(ap, char *);
-				if (string_placeholder == NULL)
-				{
-					printf("(nil)");
-					break;
-				}
 				printf("%s", string_placeholder);
 				break;
 			case 'f':
