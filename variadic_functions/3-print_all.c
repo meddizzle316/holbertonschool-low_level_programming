@@ -32,7 +32,7 @@ void print_all(const char * const format, ...)
 				break;
 			case 's':
 				string_placeholder = va_arg(ap, char *);
-				if (string_placeholder == NULL)
+				while (string_placeholder == NULL)
 				{
 					string_placeholder = "(nil)";
 				}
@@ -43,7 +43,7 @@ void print_all(const char * const format, ...)
 				printf("%f", float_placeholder);
 				break;
 			}
-			while (format[i + 1] != '\0' && ((format[i] == 's' 
+			if (format[i + 1] != '\0' && ((format[i] == 's' 
 			|| format[i] == 'c' 
 			|| format[i] == 'i' 
 			|| format[i] == 'f')))
