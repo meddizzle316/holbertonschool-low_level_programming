@@ -15,36 +15,40 @@ void print_all(const char * const format, ...)
 	va_list(ap);
 
 	i = 0;
-	va_start(ap, format);
-	while (format[i] != '\0' && format != NULL)
+	printf("%s", format);
+	if (format != NULL)
 	{
-		switch(format[i]) {
-		case 'c':
-			char_placeholder = va_arg(ap, int);
-			printf("%c", char_placeholder);
-			break;
-		case 'i':
-			int_placeholder = va_arg(ap, int);
-			printf("%d", int_placeholder);
-			break;
-		case 's':
-			string_placeholder = va_arg(ap, char *);
-			printf("%s", string_placeholder);
-			break;
-		case 'f':
-			float_placeholder = va_arg(ap, double);
-			printf("%f", float_placeholder);
-			break;
-		}
-		if (format[i + 1] != '\0' && ((format[i] == 's' 
-		|| format[i] == 'c' 
-		|| format[i] == 'i' 
-		|| format[i] == 'f')))
+		va_start(ap, format);
+		while (format[i] != '\0')
 		{
-			printf(", ");
+			switch(format[i]) {
+			case 'c':
+				char_placeholder = va_arg(ap, int);
+				printf("%c", char_placeholder);
+				break;
+			case 'i':
+				int_placeholder = va_arg(ap, int);
+				printf("%d", int_placeholder);
+				break;
+			case 's':
+				string_placeholder = va_arg(ap, char *);
+				printf("%s", string_placeholder);
+				break;
+			case 'f':
+				float_placeholder = va_arg(ap, double);
+				printf("%f", float_placeholder);
+				break;
+			}
+			if (format[i + 1] != '\0' && ((format[i] == 's' 
+			|| format[i] == 'c' 
+			|| format[i] == 'i' 
+			|| format[i] == 'f')))
+			{
+				printf(", ");
+			}
+			i++;
 		}
-		i++;
+		putchar('\n');
+		va_end(ap);
 	}
-	putchar('\n');
-	va_end(ap);
 }
