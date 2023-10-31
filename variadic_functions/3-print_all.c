@@ -1,7 +1,7 @@
 #include "variadic_functions.h"
 #include <stdbool.h>
 /**
- * print_al? - a function that prints anything
+ * print_all - a function that prints anything
  * @format: a list of types of arguments passed to the function
  * @...: an ellipse that represents the variable arguments passed
  * Return: anything of c, i, f or char* type can be printed
