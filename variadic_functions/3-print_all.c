@@ -15,7 +15,7 @@ void print_all(const char * const format, ...)
 	va_list(ap);
 
 	i = 0;
-	if (format != NULL)
+	while (format != NULL)
 	{
 		va_start(ap, format);
 		while (format[i] != '\0')
@@ -31,6 +31,11 @@ void print_all(const char * const format, ...)
 				break;
 			case 's':
 				string_placeholder = va_arg(ap, char *);
+				if (string_placeholder == NULL)
+				{
+					printf("(nil)");
+					break;
+				}
 				printf("%s", string_placeholder);
 				break;
 			case 'f':
@@ -47,7 +52,7 @@ void print_all(const char * const format, ...)
 			}
 			i++;
 		}
-		putchar('\n');
 		va_end(ap);
 	}
+	putchar('\n');
 }
