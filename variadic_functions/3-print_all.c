@@ -15,7 +15,6 @@ void print_all(const char * const format, ...)
 	va_list(ap);
 
 	i = 0;
-	printf("%s", format);
 	if (format != NULL)
 	{
 		va_start(ap, format);
