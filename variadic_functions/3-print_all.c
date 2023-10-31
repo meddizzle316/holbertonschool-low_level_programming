@@ -1,4 +1,5 @@
 #include "variadic_functions.h"
+#include <stdbool.h>
 /**
  * print_al? - a function that prints anything
  * @format: a list of types of arguments passed to the function
@@ -31,7 +32,13 @@ void print_all(const char * const format, ...)
 				break;
 			case 's':
 				string_placeholder = va_arg(ap, char *);
-				printf("%s", string_placeholder);
+				switch(string_placeholder == NULL) {
+				case 1:
+					printf("(nil)");
+					break;
+				case 0:
+					printf("%s", string_placeholder);
+					break;
 				break;
 			case 'f':
 				float_placeholder = va_arg(ap, double);
