@@ -7,21 +7,20 @@
 void free_list(list_t *head)
 {
 	list_t *current;
+	list_t *temp;
 
 	current = NULL;
 	current = head;
+
 	while (current != NULL)
 	{
+		temp = current;
 		if (current->str)
 		{
 			free(current->str);
 		}
 		current = current->next;
+		free(temp);
 	}
-	current = head;
-	if (current != NULL)
-	{
-		free(current->next);
-		free(current);
-	}
+	head = NULL;
 }
