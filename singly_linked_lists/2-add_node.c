@@ -13,10 +13,16 @@ list_t *add_node(list_t **head, const char *str)
 	new = NULL;
 	new = malloc(sizeof(list_t));
 	if (new == NULL)
+	{
+		free(new);
 		return (NULL);
+	}
 	copied_string = (char *)malloc(sizeof(char) * strlen(str) + 1);
 	if (copied_string == NULL)
+	{
+		free(copied_string);
 		return (NULL);
+	}
 	strcpy(copied_string, str);
 	new->str = copied_string;
 	new->len = strlen(copied_string);
