@@ -19,7 +19,7 @@ list_t *add_node_end(list_t **head, const char *str)
 	{
 		free(new);
 		free(copied_string);
-		return(NULL);
+		return (NULL);
 	}
 	strcpy(copied_string, str);
 	new->str = copied_string;
@@ -31,7 +31,7 @@ list_t *add_node_end(list_t **head, const char *str)
 		return (new);
 	}
 	current = *head;
-	while (current ->next != NULL)
+	while (current->next != NULL)
 	{
 		current = current->next;
 	}
