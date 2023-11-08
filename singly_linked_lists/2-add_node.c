@@ -12,15 +12,10 @@ list_t *add_node(list_t **head, const char *str)
 
 	new = NULL;
 	new = malloc(sizeof(list_t));
-	if (new == NULL)
-	{
-		free(new->str);
-		free(new);
-		return (NULL);
-	}
 	copied_string = (char *)malloc(sizeof(char) * strlen(str) + 1);
-	if (copied_string == NULL)
+	if (copied_string == NULL || new == NULL)
 	{
+		free(new);
 		free(copied_string);
 		return (NULL);
 	}
