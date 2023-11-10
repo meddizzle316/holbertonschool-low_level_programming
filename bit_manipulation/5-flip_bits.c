@@ -9,11 +9,11 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
 	char binArray1[32];
 	char binArray2[32];
-	int i, x, big, small;
-	unsigned int result;
+	int i, x;
+	unsigned int result, big, small;
 
-	i = x = big = small = 0;
-	result = 0;
+	i = x = 0;
+	result = big = small = 0;
 	if (n > m)
 	{
 		big = n;
@@ -33,8 +33,6 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 		small = small >> 1;
 		x++;
 	}
-	binArray1[i] = '\0';
-	binArray2[x] = '\0';
 	for (x = x - 1, i = i - 1; i >= 0; i--, x--)
 	{
 		if (binArray1[i] != binArray2[x])
