@@ -7,8 +7,8 @@
  */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	char binArray1[32];
-	char binArray2[32];
+	char binArray1[64];
+	char binArray2[64];
 	int i, x;
 	unsigned int result, big, small;
 
