@@ -12,18 +12,18 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	char *string;
 	ssize_t bytesRead;
 	
+	bytesRead = 0;
 	if (filename == NULL || letters <= 0)
 	{
-		return (0);
+		return (bytesRead);
 	}
 	string = malloc(letters + 1);
 	if (string == NULL)
 	{
 		free(string);
-		return (0);
+		return (bytesRead);
 	}
 	fd = open(filename, O_RDONLY);
-	bytesRead = 0;
 	if (fd)
 	{
 		bytesRead = read(fd, string, letters);
@@ -31,12 +31,12 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	else
 	{
 		close(fd);
-		return (0);
+		return (bytesRead);
 	}
 	if (bytesRead == 0)
 	{
 		close(fd);
-		return (0);
+		return (bytesRead);
 	}
 	if (bytesRead >= 0)
 	{
