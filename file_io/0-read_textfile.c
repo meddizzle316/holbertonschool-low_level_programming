@@ -24,8 +24,14 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	{
 		bytesRead = read(fd, string, letters);
 	}
+	else
+	{
+		close(fd);
+		return (0);
+	}
 	if (bytesRead == 0)
 	{
+		close(fd);
 		return (0);
 	}
 	if (bytesRead >= 0)
