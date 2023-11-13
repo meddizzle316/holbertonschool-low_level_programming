@@ -18,7 +18,10 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		free(string);
 		return (0);
 	}
-	fd = open(filename, O_RDONLY);
+	if (filename != NULL)
+		fd = open(filename, O_RDONLY);
+	else
+		return (0);
 	bytesRead = 0;
 	if (fd)
 	{
