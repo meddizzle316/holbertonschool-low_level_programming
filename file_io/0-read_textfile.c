@@ -8,11 +8,12 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int fd;
+	int fd, i;
 	char *string;
 	ssize_t bytesRead;
 	
 	bytesRead = 0;
+	i = 0;
 	if (filename == NULL || letters <= 0)
 	{
 		return (0);
@@ -34,6 +35,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		bytesRead = read(fd, string, letters);
 		if (bytesRead == -1)
 		{
+			close(fd);
 			return (0);
 		}
 	}
@@ -44,8 +46,12 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	}
 	if (bytesRead >= 0)
 	{
-		string[bytesRead] = '\0';
-		printf("%s", string);
+		i = write(STDOUT_FILENO, string, bytesRead);
+		if (i == -1)
+		{
+			close(fd);
+			return (0);
+		}
 	}
 	free(string);
 	close(fd);
