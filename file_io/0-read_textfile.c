@@ -15,23 +15,27 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	bytesRead = 0;
 	if (filename == NULL || letters <= 0)
 	{
-		return (bytesRead);
+		return (0);
 	}
-	string = malloc(letters + 1);
+	string = malloc(letters);
 	if (string == NULL)
 	{
 		free(string);
-		return (bytesRead);
+		return (0);
 	}
 	fd = open(filename, O_RDONLY);
+	if (fd == -1)
+	{
+		close(fd);
+		return (0);
+	}
 	if (fd)
 	{
 		bytesRead = read(fd, string, letters);
-	}
-	else if (fd == -1)
-	{
-		close(fd);
-		return (bytesRead);
+		if (bytesRead == -1)
+		{
+			return (0);
+		}
 	}
 	if (bytesRead == 0)
 	{
@@ -43,6 +47,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		string[bytesRead] = '\0';
 		printf("%s", string);
 	}
+	free(string);
 	close(fd);
 	return (bytesRead);
 }
