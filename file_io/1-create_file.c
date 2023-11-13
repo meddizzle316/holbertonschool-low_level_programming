@@ -1,5 +1,7 @@
 #include "main.h"
+#include <sys/stat.h>
 #include <string.h>
+#include <fcntl.h>
 /**
  * function name - function description
  * @parameters: description
@@ -16,7 +18,7 @@ int create_file(const char *filename, char *text_content)
 	{
 		return (-1);
 	}
-	fd = open(filename, O_RDWR | O_CREAT);
+	fd = open(filename, S_IRUSR | S_IWUSR | O_CREAT);
 	if (fd == -1)
 	{
 		close(fd);
