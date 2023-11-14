@@ -4,9 +4,10 @@
 #include <string.h>
 #include <fcntl.h>
 /**
- * function name - function description
- * @parameters: description
- * Return: return value
+ * create_file - creates a file
+ * @filename: name of file
+ * @text_content: content to be written to file
+ * Return: 1 if succeeds and -1 if not
  */
 int create_file(const char *filename, char *text_content)
 {
@@ -34,9 +35,8 @@ int create_file(const char *filename, char *text_content)
 		}
 		close(fd);
 		return (1);
-
 	}
-	else 
+	else
 	{
 		fd = open(filename, O_CREAT | O_RDWR | O_RDONLY | O_TRUNC);
 		if (fd == -1)
