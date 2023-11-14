@@ -1,5 +1,6 @@
 #include "main.h"
 #include <sys/stat.h>
+#include <sys/types.h>
 #include <string.h>
 #include <fcntl.h>
 /**
@@ -19,7 +20,7 @@ int create_file(const char *filename, char *text_content)
 	if (text_content != NULL)
 	{
 		len = strlen(text_content);
-		fd = open(filename, O_CREAT | O_RDWR | O_TRUNC);
+		fd = open(filename, O_CREAT, S_IRUSR | O_RDWR | O_TRUNC);
 		if (fd == -1)
 		{
 			close(fd);
