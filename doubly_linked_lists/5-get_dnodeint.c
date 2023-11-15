@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
- * get_dnodeint_at_index - returns the nth node of a dlistint_t list 
+ * get_dnodeint_at_index - returns the nth node of a dlistint_t list
  * @head: head of list
  * @index: nth node to be returned
  * Return: return pointer if it exists, NULL if not
