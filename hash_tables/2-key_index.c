@@ -2,7 +2,7 @@
 /**
  * key_index - gets index of key
  * @key: key to be hashed
- * @size: size of hashtable 
+ * @size: size of hashtable
  * Return: index or 0 if fails
  */
 unsigned long int key_index(const unsigned char *key, unsigned long int size)
