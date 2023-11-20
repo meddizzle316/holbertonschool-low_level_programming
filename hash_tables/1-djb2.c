@@ -1,8 +1,8 @@
 #include "hash_tables.h"
 /**
- * function name - function description
- * @parameters: description
- * Return: return value
+ * hash_djb2 - a hash function; designed by daniel julius bernstein
+ * @str: a string to be basis for random int number output
+ * Return: random int output based on str
  */
 unsigned long int hash_djb2(const unsigned char *str)
 {
