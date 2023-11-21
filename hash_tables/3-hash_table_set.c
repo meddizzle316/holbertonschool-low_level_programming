@@ -46,7 +46,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (ht == NULL)
 		return (0);
 	index = key_index((unsigned const char *)copied_key, ht->size);
-	new->next = ht->array[index];
 	ht->array[index] = new;
 	return (1);
 }
