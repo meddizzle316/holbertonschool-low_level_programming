@@ -6,7 +6,8 @@
  */
 void hash_table_print(const hash_table_t *ht)
 {
-	int i, n;
+	unsigned long int i; 
+	int n;
 
 	n = 0;
 	printf("{");
