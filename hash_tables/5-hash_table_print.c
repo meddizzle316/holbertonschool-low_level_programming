@@ -1,8 +1,8 @@
 #include "hash_tables.h"
 /**
- * function name - function description
- * @parameters: description
- * Return: return value
+ * hash_table_print - prints out a hash table of hash_table_t
+ * @ht: pointer to hash table
+ * Return: nothing
  */
 void hash_table_print(const hash_table_t *ht)
 {
@@ -10,7 +10,6 @@ void hash_table_print(const hash_table_t *ht)
 	int n;
 
 	n = 0;
-	printf("{");
 	if (ht != NULL)
 	{
 		printf("{");
