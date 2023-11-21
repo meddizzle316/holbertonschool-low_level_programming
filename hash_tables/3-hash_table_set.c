@@ -5,7 +5,7 @@
  * @s: string to be copied
  * Return: a pointer to a copied string
  */
-char* strdup (const char *s)
+char *strdup(const char *s)
 {
 	size_t slen;
 	char *result;
@@ -16,13 +16,15 @@ char* strdup (const char *s)
 	{
 		return (NULL);
 	}
-	memcpy(result, s, slen+1);
+	memcpy(result, s, slen + 1);
 	return (result);
 }
 /**
- * function name - function description
- * @parameters: description
- * Return: return value
+ * hash_table_set - sets a node in a hashtable of hash_table_t
+ * @ht: pointer to hashtable
+ * @key: pointer to char key
+ * @value: pointer to char value
+ * Return: 1 if success, 0 if fail
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
@@ -52,7 +54,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		ht->array[index] = new;
 		return (1);
 	}
-	if (strcmp(new->key,ht->array[index]->key) != 0)
+	if (strcmp(new->key, ht->array[index]->key) != 0)
 	{
 		new->next = ht->array[index];
 		ht->array[index] = new;
