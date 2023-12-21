@@ -11,8 +11,6 @@ void print_array(const int *array, size_t size)
 	size_t i;
 
 	i = 0;
-	if (size > 0)
-	{
 		printf("Searching in array: ");
 		while (array && i < size)
 		{
@@ -24,7 +22,6 @@ void print_array(const int *array, size_t size)
 			++i;
 		}
 		printf("\n");
-	}
 }
 
 /**
@@ -38,18 +35,25 @@ void print_array(const int *array, size_t size)
  */
 int binary_search_recursion(int *array, size_t low, size_t high, int value)
 {
-	int mid;
+	int mid = 0;
+
 	size_t new_size = (high - low);
+	if (new_size == 0)
+		new_size = 1;
 
 	print_array(&array[low], new_size);
-	mid = low + (high - low) / 2; 
-
-	if (low > high)
-		return (-1);
+	if (new_size == 1 || new_size == 0)
+		mid = (high + low) / 2;
+	else if (new_size % 2 == 0)
+		mid = ((high + low) / 2) - 1;
+	else if (new_size % 2 == 1)
+		mid = low + (high - low) / 2; 
 
 	if (array[mid] == value)
 		return (mid);
-
+	
+	if (low > high || new_size <= 1)
+		return (-1);
 	if (array[mid] > value)
 		return (binary_search_recursion(array, low, mid - 1, value));
 
@@ -69,6 +73,9 @@ int binary_search_recursion(int *array, size_t low, size_t high, int value)
  */
 int binary_search(int *array, size_t size, int value)
 {
+	if (array == NULL)
+		return (-1);
+
 	size_t low, high;
 
 	high = size;
