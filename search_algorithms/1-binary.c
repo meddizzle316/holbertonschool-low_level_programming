@@ -40,7 +40,6 @@ int binary_search_recursion(int *array, size_t low, size_t high, int value)
 	size_t new_size = (high - low);
 	if (new_size == 0)
 		new_size = 1;
-
 	print_array(&array[low], new_size);
 	if (new_size == 1 || new_size == 0)
 		mid = (high + low) / 2;
@@ -48,18 +47,14 @@ int binary_search_recursion(int *array, size_t low, size_t high, int value)
 		mid = ((high + low) / 2) - 1;
 	else if (new_size % 2 == 1)
 		mid = low + (high - low) / 2; 
-
 	if (array[mid] == value)
 		return (mid);
-	
 	if (low > high || new_size <= 1)
 		return (-1);
 	if (array[mid] > value)
 		return (binary_search_recursion(array, low, mid - 1, value));
-
 	if (array[mid] < value)
 		return (binary_search_recursion(array, mid + 1, high, value));
-
 	return (-1);
 }
 
@@ -73,13 +68,11 @@ int binary_search_recursion(int *array, size_t low, size_t high, int value)
  */
 int binary_search(int *array, size_t size, int value)
 {
-	if (array == NULL)
-		return (-1);
-
 	size_t low, high;
 
+	if (array == NULL)
+		return (-1);
 	high = size;
 	low = 0;
-
 	return (binary_search_recursion(array, low, high, value));
 }
